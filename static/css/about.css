@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Hind+Vadodara:wght@300&family=Josefin+Slab:wght@500&family=Kanit:wght@800&family=Montserrat:wght@200&family=Nunito:wght@300&family=Strait&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+
+
+
+
+body{
+    overflow: hidden;
+}
+
+#abouter .main {
+    height: 35em;
+    width: 100%;
+    margin-top : 1em;
+    background: #52303070;
+    border-radius: 1em;
+    box-shadow: 0 0 20px 0px black;
+    margin-bottom : 300em ;  
+    backdrop-filter: blur(17px);
+}
+#abouter::before {
+    content: '';
+    position: absolute;
+    height: 55em;
+    width: 55em;
+    top: -3em;
+    left: -16%;
+    border-radius: 100%;
+    z-index: -1;
+    background: linear-gradient(to left , #12c2e9 , #c471ed , #f64f59);
+}
+#abouter::after {
+    content: '';
+    position: absolute;
+    height: 36em;
+    width: 35em;
+    top: -13em;
+    right: -6%;
+    border-radius: 100%;
+    z-index: -1;
+    /* background: linear-gradient(to left , #12c2e9 , #c471ed , #f64f59); */
+    background: rgb(171,58,180);
+background: linear-gradient(110deg, rgba(171,58,180,1) 0%, rgba(241,51,51,1) 50%, rgba(255,213,154,1) 100%);
+}
+#abouter .picture img {
+    height: 27em;
+    /* transition: 0.2s ease-in-out; */
+    object-fit: cover;
+    width: 27em;
+    border-radius: 1em;
+    box-shadow: 0 0 9px 0px black;
+    transition : 0.2s linear;
+    border: 9px solid #27272747;
+}
+#abouter .picture img:hover {
+    transform : scale(1.2) ; 
+}
+#abouter .about {
+    box-shadow: 0 0 8px #573e40;
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 1em;
+    height: 33em;
+    background-image: linear-gradient(to right bottom, #d6606052, #dd807f5e, #e29f9e47, #e3bebd4f, #e1dcdc6b);
+}
+
+#abouter .about ul {
+    text-align: left;
+    line-height: 1.5em;
+}
+
+#abouter .about p {
+    color: cornsilk;
+    font-weight: 200;
+    
+}
+#abouter .about .first {
+    font-family: 'Strait', sans-serif;
+    color: cornsilk;
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #2a2c2b;
+}
+
+#abouter .second {
+    text-align: left;
+}
+#abouter .second p {
+    color: #b8ce8f;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 0.2em;
+    font-weight: 400;
+}
+#abouter .second ul {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2.1em;
+}
+
+#abouter .second b {
+    color: #ef6d6d;
+}
+
+#abouter .about .third {
+    font-size: 1.8em;
+    padding: 0.2em;
+    color: rgb(17 26 33 / 93%);
+    font-family: 'Strait';
+    border-bottom: 2px dashed;
+}
+
+#abouter .about .four {
+    font-size : 1.5em;
+    color : #d8c782;
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+#abouter .about .four a {
+    transition: 1s linear;
+}
+#abouter .about .four a:hover {
+
+    transition: 0.5s linear ;
+    color : red ; 
+
+
+}
+
+    
+#buttons a:first-child {
+    position: absolute;
+    top: 17em;
+    left: 21.7em;
+    background: #00000038;
+    padding: 10px 20px;
+    border-radius: 2em;
+    text-decoration: none;
+    color: #daa52099;
+    font-size: 1.8em;
+}
+.liner {
+    content: '';
+    position: absolute;
+    left: 52em;
+    top: 13em;
+    /* background: linear-gradient(110deg, rgba(180,174,58,1) 0%, rgba(255,0,0,1) 50%, rgba(255,154,154,1) 100%); */
+    /* background: linear-gradient(110deg, rgba(124,137,236,1) 0%, rgba(75,209,31,1) 100%); */
+    background: linear-gradient(to bottom, red, rgb(235, 80, 80));
+    height: 50em;
+    width: 9em;
+    transform: rotate( 
+322deg
+ );
+    border-radius: 5em;
+}
+.first .name {
+    color: #232323;
+    font-style: bold;
+    font-family: 'Girassol';
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+.baller {
+    content: '';
+    position: absolute;
+    left: 79em;
+    top: 34em;
+    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    height: 10em;
+    width: 10em;
+    border-radius: 100%;
+
+}
+#buttons a:last-child {
+    position: absolute;
+    top: 20.6em;
+    left: 50.5em;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background: #00000038;
+
+    border-radius: 2em;
+    text-decoration: none;
+    color: #daa52099;
+
+}

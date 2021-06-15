@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+{% block home %}
+<div class = "container" >
+
+  <div class="line-1" id ="line_an"></div>
+  <div class="line-2" id ="line_an"></div>
+  <div class="shape-1" id = "an"></div>
+  <div class="shape-2" id = "an"></div>
+  <div class="shape-3" id = "an"></div>
+  <div class="shape-4" id = "an"></div>
+  <div class="shape-5" id = "an"></div> 
+
+
+ 
+    {% for product in object_list %}
+    <a href= {{ product.get_absolute_url }} style ='text-decoration:none;' >
+    <div class="card">
+        {% comment %} <img id='card-img' src= {% static 'five.jpeg' %} >  {% endcomment %}
+        <img id='card-img' src="{{ product.image.url}}"  alt = "{{ product.name }}" > 
+        <div id='card-name' > {{ product.name }} </div>
+        <div id='card-price' > $ {{ product.price }} </div>
+    </div>
+    </a>
+    {% endfor %}
+ 
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock home %}

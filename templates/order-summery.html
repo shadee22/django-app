@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load fontawesome %}
+
+
+{% block ordersummery %}
+
+<section class = 'order_summeries' style = 'margin-top : 5em ; '>
+<div class='container table ' > 
+    <div class = 'lin'> </div>
+
+
+    <table class='text-white'>
+        <thead>
+            <tr> <th> Item </th><th> Quantity </th><th> Total </th>
+            {% comment %} <th> Savings </th> {% endcomment %}
+             </tr>
+        </thead>
+        <tbody class = 'text-center' >
+        {% for item in object_list%}
+        {% if item.quantity >= 1 %}
+
+            <tr>
+                <td> {{ item.item  }} </td>
+                <td> 
+                <a href = {% url 'store:removing-single-item-from-cart' item.item.slug %} > {% fontawesome_icon 'minus' %}</a> 
+                {{ item.quantity }}
+                <a href={% url "store:adding-single-item-to-cart" item.item.slug %}> {% fontawesome_icon 'plus' %}</a> 
+                </td>
+                <td> $ {{item.total}} </td>
+                {% comment %} <td> $ 60.10 </td> {% endcomment %}
+            </tr>
+
+        {% endif %}
+        {% endfor %}
+
+            <tr>
+                <td colspan = "2" > <button class= "btn btn-warning" > Ready To deliver  </button></td>
+                <td> <button class= 'btn btn-danger'> Back to Shopping </button></td>
+            </tr>
+
+        </tbody>
+       
+
+    </table>
+     
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock ordersummery %}
+
+
+
+
+
+
+
+
+
+
+
+
+

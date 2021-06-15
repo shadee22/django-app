@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}">
+
+{% block detail %}
+<div class = 'preloader' > </div>
+<style>
+
+.preloader {
+  background : black url( '/static/loader.gif' ) 50% no-repeat ;
+  /* background: url('loader.gif'); */
+  display: flex;
+  justify-content :center ;
+  align-items: center;
+  width: 100%;
+  height : 100vh;
+  z-index : 100 ; 
+  position: absolute;
+}
+
+</style>
+
+
+<div id="detail" class = "container text-light">
+        <div id='product-picture' class = 'col-7' >
+           <img src= {{ item.image.url }} alt='Product Image' > 
+        </div> 
+        <div id='product-details' class = 'col-5' >
+
+            <h2 id="product-name">{{ item.name }} {% for one in order %} {{one.item }}{% endfor %} </h2>
+
+            <p id="product-des"> 
+                You can modify the variables to your own custom values, or just use the mixins
+                with their default values. Here’s an example of using the default settings to
+                create a two-column layout with a gap between.
+                When using Bootstrap’s source Sass files, you have the option of using Sass variables and 
+                mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes 
+                use these same variables and mixins 
+                to provide a whole suite of ready-to-use classes for fast responsive layouts.
+            </p>
+
+
+            <h2 id='product-price'> $ {{ item.price }} </h2>
+            <div class='buttons'>
+            
+                <a href = "{{ item.add_to_cart_url }} ">
+                <button> add to cart </button>
+                </a>
+                {% if count.quantity >= 1%}
+                <div class = 'cart_informer' >
+                 +{{ count.quantity }}
+                </div>
+                {% endif %}
+                <a href = "{{ item.remove_from_cart }} ">
+                <button > remove from cart </button>
+                </a>
+            </div>
+        </div>
+
+</div>
+
+<div id='extra-things' class='container  text-white ' > 
+
+    <div class='col ' >
+        <div class='name-card'>
+
+            <img src= {% static 'messi.jpeg' %} >
+
+            <div class='name'>
+                Messi
+            </div>
+            <div class='quote text-center'>
+                " This is the easy and best site i ever visited.
+                I love there user experiance.if anyone buy anything
+                i will recommend <b class='text-white'> Store Conner </b>. "
+            </div>
+
+        </div>
+    </div>
+    <div class='col ' >
+        <div class='name-card'>
+
+            <img src= {% static 'neymar.jpeg' %} >
+
+            <div class='name'>
+                Neymar
+            </div>
+            <div class='quote text-center'>
+               "I have learned over the years
+                that when one's mind is made up,
+                 this diminishes fear "
+            </div>
+
+        </div>
+    </div>
+    <div class='col ' >
+        <div class='name-card'>
+
+            <img src= {% static 'ronaldo.jpeg' %} >
+
+            <div class='name'>
+                Ronaldo
+            </div>
+            <div class='quote text-center'>
+                " A life spent making mistakes is not
+                 only more honorable, but more useful 
+                 than a life spent doing nothing.” ...
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+<script > 
+
+    let loader = document.querySelector('.preloader') 
+
+    window.addEventListener ( 'load' , function(){
+        loader.style.display = "none" ; 
+    } )
+
+</script>
+
+{% endblock detail %}
