@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_bootstrap_icons',
     'Core',
-     'livereload', 
-    'fontawesome',
+    'livereload', 
     "bootstrap4",
 ]
 

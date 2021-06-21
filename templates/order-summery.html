@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load fontawesome %}
+
 
 
 {% block ordersummery %}
@@ -23,9 +23,9 @@
             <tr>
                 <td> {{ item.item  }} </td>
                 <td> 
-                <a href = {% url 'store:removing-single-item-from-cart' item.item.slug %} > {% fontawesome_icon 'minus' %}</a> 
+                <a href = {% url 'store:removing-single-item-from-cart' item.item.slug %} > - </a> 
                 {{ item.quantity }}
-                <a href={% url "store:adding-single-item-to-cart" item.item.slug %}> {% fontawesome_icon 'plus' %}</a> 
+                <a href={% url "store:adding-single-item-to-cart" item.item.slug %}> + </a> 
                 </td>
                 <td> $ {{item.total}} </td>
                 {% comment %} <td> $ 60.10 </td> {% endcomment %}
